@@ -48,11 +48,9 @@ class Bot:
         
         
     def search_username(self, username: str):
-        print(f"Searching username {username}")
         search_box = WebDriverWait(self.driver, 30).until(
             EC.presence_of_element_located((By.XPATH, "//input[@aria-label='Search input']"))
         )
-        print("Search box found...")
         search_box.clear()
         time.sleep((random.random()+1)*3)
         for letter in username:
@@ -111,11 +109,12 @@ if __name__ == "__main__":
                     time.sleep(500)
                     bot.reload_page()
             
-            if x == 17:
+            if x == 16:
                 time.sleep(500)
                 x = 0
             
-            
+            if x > 16:
+                exit()
 
     # bot.search_username("")
     
