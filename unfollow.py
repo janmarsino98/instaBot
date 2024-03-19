@@ -38,7 +38,7 @@ class Bot:
         self.driver.get(initial_site)
         self.driver.add_cookie({
             "name": "sessionid",
-            "value": "", # INSTAGRAM SESSION ID COOKIE VALUE
+            "value": "212321299%3AqNKC3GVh62H7uo%3A18%3AAYdMgH373V8uP_TPzLwa8kLla2FbvpLi_f9YTrNiOA", # INSTAGRAM SESSION ID COOKIE VALUE
             "domain": ".instagram.com",
         })
         self.driver.refresh()
